@@ -1,0 +1,166 @@
+// 1 – Cadastro inteligente
+// Crie uma função que:
+// Peça nome, idade e altura do usuário
+// Converta os dados corretamente (string → número)
+// Valide se idade é um número válido
+// Use uma função para verificar se a pessoa é maior de idade
+// Exiba uma mensagem personalizada
+// Trate erros caso o usuário digite valores inválidos
+/**
+ * @author Caique
+ */
+
+// 2 – Calculadora com menu
+// Crie uma função calculadora que:
+// Mostre um menu (soma, subtração, multiplicação, divisão)
+// Receba dois números do usuário
+// Use switch ou if
+// Use funções para cada operação
+// Faça loop para permitir várias operações
+// Trate divisão por zero com erro
+/**
+ * @author João França
+ */
+
+// 3 – Adivinhe o número
+// Gere um número aleatório
+// Peça palpites ao usuário
+// Use loop até acertar
+// Dê dicas (maior ou menor)
+// Conte tentativas
+// Use função para validar entrada
+/**
+ * @author Miguel
+ */
+
+// 4 – Sistema de notas
+// Receba várias notas (loop)
+// Calcule média (função)
+// Mostre situação (aprovado/reprovado)
+// Valide entradas
+// Permita sair digitando "fim"
+/**
+ * @author Pamela
+ */
+
+// 5 – Conversor universal
+// Converta:
+// Celsius ↔ Fahrenheit
+// Km ↔ Milhas
+// Menu interativo
+// Funções para cada conversão
+// Validação de tipo
+// Loop para múltiplas conversões
+/**
+ * @author Adriel
+ */
+
+// 6 – Login com tentativas
+// Crie usuário e senha fixos
+// Peça login
+// Permita até 3 tentativas
+// Use loop + condição
+// Crie função de validação
+// Lance erro após 3 falhas
+/**
+ * @author Paulo
+ */
+
+// 7 – Lista de compras
+// Permita adicionar itens (array)
+// Mostrar lista
+// Remover item
+// Use funções para cada ação
+// Loop com menu
+// Valide entradas inválidas
+/**
+ * @author Steven
+ */
+
+
+// 8 – Tabuada personalizada
+// Peça um número
+// Mostre tabuada de 1 a 10
+// Use loop
+// Função para gerar tabuada
+// Trate erro se não for número
+/**
+ * @author João Victor Doniak
+ */
+
+// 9 – Verificador de senha forte
+// Peça uma senha
+// Verifique:
+// tamanho mínimo
+// número
+// letra maiúscula
+// Use função
+// Retorne mensagens diferentes
+// Trate entrada inválida
+/**
+ * @author Larissa
+ */
+
+// 10 – Sistema de banco simples
+// Saldo inicial
+// Menu:
+// Depositar
+// Sacar
+// Ver saldo
+// Use funções
+// Valide valores
+// Não permitir saldo negativo
+// Loop contínuo
+/**
+ * @author Pompeo
+ */
+
+
+// 11 – Contador de palavras
+// Peça uma frase
+// Conte quantas palavras existem
+// Use função
+// Trate entradas vazias
+// Mostre resultado
+/**
+ * @author Marlon
+ */
+
+// 12 – Jogo par ou ímpar
+// Usuário escolhe par ou ímpar
+// Computador gera número
+// Soma e verifica resultado
+// Loop de repetição
+// Função para lógica
+// Validação de escolha
+/**
+ * @author Natan
+ */
+
+// 13 – Filtro de números
+// Receba vários números
+// Armazene em array
+// Separe pares e ímpares
+// Use funções
+// Loop para entrada
+// Valide valores
+
+
+// 14 – Agenda simples
+// Adicionar contatos (nome + telefone)
+// Listar contatos
+// Buscar contato
+// Use funções
+// Loop com menu
+// Trate erros de busca
+
+
+// 15 – Simulador de fila
+// Crie uma fila (array)
+// Opções:
+// Entrar na fila
+// Atender próximo
+// Ver fila
+// Use funções
+// Loop contínuo
+// Trate fila vazia
