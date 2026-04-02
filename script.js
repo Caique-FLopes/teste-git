@@ -54,6 +54,9 @@
 /**
  * @author Adriel
  */
+function exercicio6(){
+    let nome=prompt('Digite ')
+}
 
 // 6 – Login com tentativas
 // Crie usuário e senha fixos
