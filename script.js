@@ -10,6 +10,30 @@
  * @author Caique
  */
 
+function exercicio1(){
+    try{
+        let nome = prompt('Digite o seu Nome!');
+        let idade = parseInt(prompt('Digite a sua Idade!'));
+        let altura = parseFloat(prompt('Digite a sua Altura!'));
+    
+        if(idade < 0){
+            throw "Valor de idade incorreto";
+        }
+    
+        console.log(`${nome} é ${validaIdade(idade)}.`);
+    } catch(err){
+        console.error(err);
+    }
+}
+
+function validaIdade(idade){
+    if(idade >= 18){
+        return "Maior de idade";
+    } else {
+        return "Menor de idade";
+    }
+}
+
 // 2 – Calculadora com menu
 // Crie uma função calculadora que:
 // Mostre um menu (soma, subtração, multiplicação, divisão)
