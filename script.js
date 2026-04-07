@@ -10,6 +10,30 @@
  * @author Caique
  */
 
+function exercicio1(){
+    try{
+        let nome = prompt('Digite o seu Nome!');
+        let idade = parseInt(prompt('Digite a sua Idade!'));
+        let altura = parseFloat(prompt('Digite a sua Altura!'));
+    
+        if(idade < 0){
+            throw "Valor de idade incorreto";
+        }
+    
+        console.log(`${nome} é ${validaIdade(idade)}.`);
+    } catch(err){
+        console.error(err);
+    }
+}
+
+function validaIdade(idade){
+    if(idade >= 18){
+        return "Maior de idade";
+    } else {
+        return "Menor de idade";
+    }
+}
+
 // 2 – Calculadora com menu
 // Crie uma função calculadora que:
 // Mostre um menu (soma, subtração, multiplicação, divisão)
@@ -144,6 +168,14 @@
 // Use funções
 // Loop para entrada
 // Valide valores
+
+function exercicio13(){
+    let [pares, impares] = [[], []];
+    
+    prompt('Digite os numeros desejados (ultilize a virgula para separa-los): ').trim().split(',').map(n => parseFloat(n.trim())).map(e => (e % 2) == 0 ? pares.push(e) : impares.push(e));
+
+    console.log(pares, impares);
+}
 
 
 // 14 – Agenda simples
