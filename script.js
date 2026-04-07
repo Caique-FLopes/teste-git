@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // 1 – Cadastro inteligente
 // Crie uma função que:
 // Peça nome, idade e altura do usuário
@@ -309,4 +307,3 @@ function exercicio13(){
 // Use funções
 // Loop contínuo
 // Trate fila vazia
->>>>>>> parent of b2d2254 (merge com a branch-larissa com a resolução do exercicio 9)
