@@ -127,8 +127,7 @@ function exercicio5() {
 // Lance erro após 3 falhas
 /**
  * @author Paulo
- */
-
+ 
 // 7 – Lista de compras
 // Permita adicionar itens (array)
 // Mostrar lista
@@ -182,7 +181,49 @@ function exercio8(){
  * @author Larissa
  */
 
+function exercicio9(){
+    try{
+        let senha = prompt("Digite sua senha: ")
 
+
+    console.log(verifique(senha));
+       
+    }catch (erro){
+        console.error(erro);
+    }
+}
+
+function verifique(senha){
+
+    try{
+        console.log([senha ,senha.length < 8, /[0-9]/.test(senha), /[A-Z]/.test(senha), /[!@#$%^&()]/.test(senha)]);
+        if(senha.length < 8) throw "Senha pequena";
+        if(!/[0-9]/.test(senha)) throw("Senha invalida, adicione número");
+        if(!/[A-Z]/.test(senha)) throw "Senha invalida, adicione uma letra maiuscula";
+        if(!/[!@#$%^&*()]/.test(senha)) throw "Senha invalida, adicione um caracter especial";
+    
+        return "Senha correta";
+    } catch (error){
+        console.error(error);
+    }
+    
+    
+}
+
+exercicio9();
+// function verifique(senha){
+//     console.log(senha);
+//     if(senha = /[0-9]/){
+//         if(senha = /[A-Z]/){
+//             console.log("Senha Válida.");
+
+//         }else{
+//             throw "Senha invalida";
+//         }
+//     }else{
+//         throw "Senha invalida";
+//     }
+// }
 
 // 10 – Sistema de banco simples
 // Saldo inicial
