@@ -186,6 +186,50 @@ function exercicio13(){
 // Loop com menu
 // Trate erros de busca
 
+function exercicio14(){
+    let listaContatos = [];
+
+    let rodando = true;
+    while(rodando){
+        let option = prompt("Lista Telefonica:\n 1-Adicionar contato\n 2-Listar Contatos\n 3-Buscar Contatos");
+
+        switch(option){
+            case '1':
+                const numero = prompt('Digite o numero do novo contato:');
+                const nome = prompt('Digite o nome do novo contato:');
+                adicionarContatos(nome, numero, listaContatos);
+                break;
+            case '2':
+                listarContatos(listaContatos);
+                break;
+            case '3':
+                const pesquisa = prompt('Digite o nome a ser pesquisado:');
+                buscarContato(pesquisa, listaContatos);
+                break;
+            default:
+                rodando = false;
+                break;
+        }
+    }
+}
+
+function adicionarContatos(nome, telefone, lista){
+    lista.push({
+        nome,
+        telefone
+    });
+}
+
+function listarContatos(lista){
+    lista.forEach(contato => {
+        console.log(`[Nome: ${contato.nome} | Telefone: ${contato.telefone}]`);
+    });
+}
+
+function buscarContato(nome, lista){
+    const resultado = lista.filter(contato => contato.nome == nome)
+    console.log(`[Nome: ${resultado.nome} | Telefone: ${resultado.telefone}]`);
+}
 
 // 15 – Simulador de fila
 // Crie uma fila (array)
