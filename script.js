@@ -155,39 +155,36 @@ function validaIdade(idade){
 // Computador gera número
 // Soma e verifica resultado
 // Loop de repetição
-// Função para lógica
 // Validação de escolha
 /**
  * @author Natan
  */
+function exericio12(){}
+let continuar = "s";
 
-function exercicio12(){
-    let continuar = "s";
-    
-    while (continuar === "s") {
-    
-      let escolha = prompt("Escolha par ou impar").toLowerCase();
-    
-      while (escolha !== "par" && escolha !== "impar") {
-        escolha = prompt("Digite certo ai Carai é (Par ou Ímpar)").toLowerCase();
-      }
-    
-      let numero = Math.floor(Math.random() * 1001);
-    
-      if (numero % 2 === 0 && escolha === "par") {
-        alert("Você acertou BB O número foi " + numero);
-      } else if (numero % 2 !== 0 && escolha === "impar") {
-        alert("Você acertou BB O número foi " + numero);
-      } else {
-        alert("Você errou seu Betinhaaa O número foi " + numero);
-      }
-    
-      continuar = prompt("Quer jogar de novo? (s/n)").toLowerCase();
-    
-      while (continuar !== "s" && continuar !== "n") {
-        continuar = prompt("Responda apenas com S ou N, Você é Foda hein BB").toLowerCase();
-      }
-    }
+while (continuar === "s") {
+
+  let escolha = prompt("Escolha par ou impar").toLowerCase();
+
+  while (escolha !== "par" && escolha !== "impar") {
+    escolha = prompt("Digite certo ai Carai é (Par ou Ímpar)").toLowerCase();
+  }
+
+  let numero = Math.floor(Math.random() * 1001);
+
+  if (numero % 2 === 0 && escolha === "par") {
+    alert("Você acertou BB O número foi " + numero);
+  } else if (numero % 2 !== 0 && escolha === "impar") {
+    alert("Você acertou BB O número foi " + numero);
+  } else {
+    alert("Você errou seu Betinhaaa O número foi " + numero);
+  }
+
+  continuar = prompt("Quer jogar de novo? (s/n)").toLowerCase();
+
+  while (continuar !== "s" && continuar !== "n") {
+    continuar = prompt("Responda apenas com S ou N, Você é Foda hein BB").toLowerCase();
+  }
 }
 
 // 13 – Filtro de números
