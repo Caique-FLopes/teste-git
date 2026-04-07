@@ -10,6 +10,30 @@
  * @author Caique
  */
 
+function exercicio1(){
+    try{
+        let nome = prompt('Digite o seu Nome!');
+        let idade = parseInt(prompt('Digite a sua Idade!'));
+        let altura = parseFloat(prompt('Digite a sua Altura!'));
+    
+        if(idade < 0){
+            throw "Valor de idade incorreto";
+        }
+    
+        console.log(`${nome} é ${validaIdade(idade)}.`);
+    } catch(err){
+        console.error(err);
+    }
+}
+
+function validaIdade(idade){
+    if(idade >= 18){
+        return "Maior de idade";
+    } else {
+        return "Menor de idade";
+    }
+}
+
 // 2 – Calculadora com menu
 // Crie uma função calculadora que:
 // Mostre um menu (soma, subtração, multiplicação, divisão)
@@ -55,11 +79,6 @@
 /**
  * @author Adriel
  */
-<<<<<<< Updated upstream
-function exercicio6(){
-    let nome=prompt('Digite ')
-}
-=======
 function exercicio5() {
     console.log("\n--- Conversor de Medida ---");
     console.log("1. Quilômetros para Milhas");
@@ -68,7 +87,6 @@ function exercicio5() {
     console.log("3. Celsius para Fahrenheit");
     console.log("4. Fahrenheit para Celsius");
     console.log("0. Sair");
->>>>>>> Stashed changes
 
     let rodando = true;
     while (rodando) {
@@ -94,11 +112,12 @@ function exercicio5() {
             console.log(`\n${fahrenheit}°F = ${((fahrenheit - 32) * 5/9).toFixed(2)}°C`);
         } else {
             console.log("Opção inválida!");
+                }
             }
-        }
-    } 
-}
-    
+        } 
+    }
+}  
+
 // 6 – Login com tentativas
 // Crie usuário e senha fixos
 // Peça login
@@ -188,6 +207,14 @@ function exercicio5() {
 // Use funções
 // Loop para entrada
 // Valide valores
+
+function exercicio13(){
+    let [pares, impares] = [[], []];
+    
+    prompt('Digite os numeros desejados (ultilize a virgula para separa-los): ').trim().split(',').map(n => parseFloat(n.trim())).map(e => (e % 2) == 0 ? pares.push(e) : impares.push(e));
+
+    console.log(pares, impares);
+}
 
 
 // 14 – Agenda simples
