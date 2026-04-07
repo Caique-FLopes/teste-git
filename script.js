@@ -169,6 +169,14 @@ function validaIdade(idade){
 // Loop para entrada
 // Valide valores
 
+function exercicio13(){
+    let [pares, impares] = [[], []];
+    
+    prompt('Digite os numeros desejados (ultilize a virgula para separa-los): ').trim().split(',').map(n => parseFloat(n.trim())).map(e => (e % 2) == 0 ? pares.push(e) : impares.push(e));
+
+    console.log(pares, impares);
+}
+
 
 // 14 – Agenda simples
 // Adicionar contatos (nome + telefone)
