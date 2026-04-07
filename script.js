@@ -10,6 +10,30 @@
  * @author Caique
  */
 
+function exercicio1(){
+    try{
+        let nome = prompt('Digite o seu Nome!');
+        let idade = parseInt(prompt('Digite a sua Idade!'));
+        let altura = parseFloat(prompt('Digite a sua Altura!'));
+    
+        if(idade < 0){
+            throw "Valor de idade incorreto";
+        }
+    
+        console.log(`${nome} é ${validaIdade(idade)}.`);
+    } catch(err){
+        console.error(err);
+    }
+}
+
+function validaIdade(idade){
+    if(idade >= 18){
+        return "Maior de idade";
+    } else {
+        return "Menor de idade";
+    }
+}
+
 // 2 – Calculadora com menu
 // Crie uma função calculadora que:
 // Mostre um menu (soma, subtração, multiplicação, divisão)
@@ -101,6 +125,8 @@
  * @author Larissa
  */
 
+
+
 // 10 – Sistema de banco simples
 // Saldo inicial
 // Menu:
@@ -111,10 +137,36 @@
 // Valide valores
 // Não permitir saldo negativo
 // Loop contínuo
-/**
- * @author Pompeo
- */
+/* 
+    *@author Pompeo
+*/
 
+function exercicio10() {
+    let saldo = 85000;
+    let opcao = prompt(
+        'Bem vindo ao banco HyperPay - Feito pra você!!\n 0 - Depositar\n1 - Sacar\n2 - Ver Saldo\n3 - Sair'
+    );
+
+    if (opcao == "0") {
+        let valor = Number(prompt("Digite o valor para depositar:"))
+        saldo += valor
+        alert("Depósito realizado. Saldo atual: " + saldo)
+
+    } else if (opcao == "1") {
+        let valor = Number(prompt("Digite o valor para sacar:"))
+        saldo -= valor
+        alert("Saque realizado. Saldo atual: " + saldo)
+
+    } else if (opcao == "2") {
+        alert("Seu saldo é: " + saldo)
+
+    } else if (opcao == "3") {
+    
+
+    } else {
+        alert("Opção Inválida")
+    }
+}
 
 // 11 – Contador de palavras
 // Peça uma frase
@@ -144,6 +196,14 @@
 // Use funções
 // Loop para entrada
 // Valide valores
+
+function exercicio13(){
+    let [pares, impares] = [[], []];
+    
+    prompt('Digite os numeros desejados (ultilize a virgula para separa-los): ').trim().split(',').map(n => parseFloat(n.trim())).map(e => (e % 2) == 0 ? pares.push(e) : impares.push(e));
+
+    console.log(pares, impares);
+}
 
 
 // 14 – Agenda simples
