@@ -67,6 +67,7 @@ function validaIdade(idade){
  * @author Pamela
  */
 
+
 // 5 – Conversor universal
 // Converta:
 // Celsius ↔ Fahrenheit
@@ -78,6 +79,44 @@ function validaIdade(idade){
 /**
  * @author Adriel
  */
+function exercicio5() {
+    console.log("\n--- Conversor de Medida ---");
+    console.log("1. Quilômetros para Milhas");
+    console.log("2. Milhas para Quilômetros");
+    console.log("\n--- Conversor de Temperatura ---");
+    console.log("3. Celsius para Fahrenheit");
+    console.log("4. Fahrenheit para Celsius");
+    console.log("0. Sair");
+
+    let rodando = true;
+    while (rodando) {
+        const opcao = prompt("Escolha uma opção: ");
+
+        if (opcao === "1") {
+            const quilômetros = parseFloat(prompt("Digite a medida em quilômetros: "));
+            if (!isNaN(quilômetros)) {
+                console.log(`\n${quilômetros}Km = ${(quilômetros * 0.621).toFixed(2)}M`);
+            } else {
+                console.log("Entrada inválida!");
+            }
+        } else if (opcao === "2") {
+            const milhas = parseFloat(prompt("Digite a medida em milhas: "));
+            if (!isNaN(milhas)) {
+                console.log(`\n${milhas}M = ${(milhas * 1.609).toFixed(2)}Km`);
+            } else if (opcao == "3") {
+                const celcius = parseFloat(prompt("Digite a temperatura em celcius: "));
+                if (!isNaN(celcius)) {
+                console.log(`\n${celsius}°C = ${(celsius * 9/5 + 32).toFixed(2)}°F`);
+            } else if (opcao === "4") {
+                const fahrenheit = parseFloat(prompt("Digite a temperatura em fahrenheit: "));
+            console.log(`\n${fahrenheit}°F = ${((fahrenheit - 32) * 5/9).toFixed(2)}°C`);
+        } else {
+            console.log("Opção inválida!");
+                }
+            }
+        } 
+    }
+}  
 
 // 6 – Login com tentativas
 // Crie usuário e senha fixos
