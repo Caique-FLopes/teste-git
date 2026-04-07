@@ -182,6 +182,8 @@ function exercio8(){
  * @author Larissa
  */
 
+
+
 // 10 – Sistema de banco simples
 // Saldo inicial
 // Menu:
@@ -192,10 +194,36 @@ function exercio8(){
 // Valide valores
 // Não permitir saldo negativo
 // Loop contínuo
-/**
- * @author Pompeo
- */
+/* 
+    *@author Pompeo
+*/
 
+function exercicio10() {
+    let saldo = 85000;
+    let opcao = prompt(
+        'Bem vindo ao banco HyperPay - Feito pra você!!\n 0 - Depositar\n1 - Sacar\n2 - Ver Saldo\n3 - Sair'
+    );
+
+    if (opcao == "0") {
+        let valor = Number(prompt("Digite o valor para depositar:"))
+        saldo += valor
+        alert("Depósito realizado. Saldo atual: " + saldo)
+
+    } else if (opcao == "1") {
+        let valor = Number(prompt("Digite o valor para sacar:"))
+        saldo -= valor
+        alert("Saque realizado. Saldo atual: " + saldo)
+
+    } else if (opcao == "2") {
+        alert("Seu saldo é: " + saldo)
+
+    } else if (opcao == "3") {
+    
+
+    } else {
+        alert("Opção Inválida")
+    }
+}
 
 // 11 – Contador de palavras
 // Peça uma frase
