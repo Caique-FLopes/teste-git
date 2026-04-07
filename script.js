@@ -64,7 +64,12 @@
 // Lance erro após 3 falhas
 /**
  * @author Paulo
+ * 
  */
+
+function exercicio6() {
+    
+}
 
 // 7 – Lista de compras
 // Permita adicionar itens (array)
