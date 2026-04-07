@@ -150,6 +150,22 @@ function exercicio5() {
 /**
  * @author João Victor Doniak
  */
+function exercio8(){
+    function gerarTabuada(){
+        const entrada = prompt("Digite um número para ver a tabuada:");
+        const numero = parseFloat(entrada);
+        if (isNaN(numero)) {
+            console.error("Erro: Por favor, digite um número válido.");
+            return;
+        }
+
+        console.log('--- Tabuada do ${numero} ---');
+        for (let i = 1; i <= 10; i++) {
+            console.log('${numero} x ${i} = ${numero * i}');
+        }
+    }
+    gerarTabuada();
+}
 
 // 9 – Verificador de senha forte
 // Peça uma senha
@@ -160,7 +176,9 @@ function exercicio5() {
 // Use função
 // Retorne mensagens diferentes
 // Trate entrada inválida
-/**
+
+
+/*
  * @author Larissa
  */
 
