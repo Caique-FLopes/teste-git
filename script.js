@@ -366,7 +366,6 @@ function atenderProximo() {
     }
 }
 
-// Função para ver a fila atual
 function verFila() {
     if (fila.length === 0) {
         console.log("\n>> A fila está vazia.");
@@ -375,7 +374,6 @@ function verFila() {
     }
 }
 
-// Loop contínuo para simular o sistema (usando prompt para interação)
 let rodando = true;
 while (rodando) {
     let opcao = prompt(
