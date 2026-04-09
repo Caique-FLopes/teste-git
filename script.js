@@ -10,6 +10,30 @@
  * @author Caique
  */
 
+function exercicio1(){
+    try{
+        let nome = prompt('Digite o seu Nome!');
+        let idade = parseInt(prompt('Digite a sua Idade!'));
+        let altura = parseFloat(prompt('Digite a sua Altura!'));
+    
+        if(idade < 0){
+            throw "Valor de idade incorreto";
+        }
+    
+        console.log(`${nome} é ${validaIdade(idade)}.`);
+    } catch(err){
+        console.error(err);
+    }
+}
+
+function validaIdade(idade){
+    if(idade >= 18){
+        return "Maior de idade";
+    } else {
+        return "Menor de idade";
+    }
+}
+
 // 2 – Calculadora com menu
 // Crie uma função calculadora que:
 // Mostre um menu (soma, subtração, multiplicação, divisão)
@@ -43,6 +67,7 @@
  * @author Pamela
  */
 
+
 // 5 – Conversor universal
 // Converta:
 // Celsius ↔ Fahrenheit
@@ -54,6 +79,44 @@
 /**
  * @author Adriel
  */
+function exercicio5() {
+    console.log("\n--- Conversor de Medida ---");
+    console.log("1. Quilômetros para Milhas");
+    console.log("2. Milhas para Quilômetros");
+    console.log("\n--- Conversor de Temperatura ---");
+    console.log("3. Celsius para Fahrenheit");
+    console.log("4. Fahrenheit para Celsius");
+    console.log("0. Sair");
+
+    let rodando = true;
+    while (rodando) {
+        const opcao = prompt("Escolha uma opção: ");
+
+        if (opcao === "1") {
+            const quilômetros = parseFloat(prompt("Digite a medida em quilômetros: "));
+            if (!isNaN(quilômetros)) {
+                console.log(`\n${quilômetros}Km = ${(quilômetros * 0.621).toFixed(2)}M`);
+            } else {
+                console.log("Entrada inválida!");
+            }
+        } else if (opcao === "2") {
+            const milhas = parseFloat(prompt("Digite a medida em milhas: "));
+            if (!isNaN(milhas)) {
+                console.log(`\n${milhas}M = ${(milhas * 1.609).toFixed(2)}Km`);
+            } else if (opcao == "3") {
+                const celcius = parseFloat(prompt("Digite a temperatura em celcius: "));
+                if (!isNaN(celcius)) {
+                console.log(`\n${celsius}°C = ${(celsius * 9/5 + 32).toFixed(2)}°F`);
+            } else if (opcao === "4") {
+                const fahrenheit = parseFloat(prompt("Digite a temperatura em fahrenheit: "));
+            console.log(`\n${fahrenheit}°F = ${((fahrenheit - 32) * 5/9).toFixed(2)}°C`);
+        } else {
+            console.log("Opção inválida!");
+                }
+            }
+        } 
+    }
+}  
 
 // 6 – Login com tentativas
 // Crie usuário e senha fixos
@@ -92,6 +155,22 @@ function exercicio6() {
 /**
  * @author João Victor Doniak
  */
+function exercio8(){
+    function gerarTabuada(){
+        const entrada = prompt("Digite um número para ver a tabuada:");
+        const numero = parseFloat(entrada);
+        if (isNaN(numero)) {
+            console.error("Erro: Por favor, digite um número válido.");
+            return;
+        }
+
+        console.log('--- Tabuada do ${numero} ---');
+        for (let i = 1; i <= 10; i++) {
+            console.log('${numero} x ${i} = ${numero * i}');
+        }
+    }
+    gerarTabuada();
+}
 
 // 9 – Verificador de senha forte
 // Peça uma senha
@@ -102,9 +181,13 @@ function exercicio6() {
 // Use função
 // Retorne mensagens diferentes
 // Trate entrada inválida
-/**
+
+
+/*
  * @author Larissa
  */
+
+
 
 // 10 – Sistema de banco simples
 // Saldo inicial
@@ -116,10 +199,36 @@ function exercicio6() {
 // Valide valores
 // Não permitir saldo negativo
 // Loop contínuo
-/**
- * @author Pompeo
- */
+/* 
+    *@author Pompeo
+*/
 
+function exercicio10() {
+    let saldo = 85000;
+    let opcao = prompt(
+        'Bem vindo ao banco HyperPay - Feito pra você!!\n 0 - Depositar\n1 - Sacar\n2 - Ver Saldo\n3 - Sair'
+    );
+
+    if (opcao == "0") {
+        let valor = Number(prompt("Digite o valor para depositar:"))
+        saldo += valor
+        alert("Depósito realizado. Saldo atual: " + saldo)
+
+    } else if (opcao == "1") {
+        let valor = Number(prompt("Digite o valor para sacar:"))
+        saldo -= valor
+        alert("Saque realizado. Saldo atual: " + saldo)
+
+    } else if (opcao == "2") {
+        alert("Seu saldo é: " + saldo)
+
+    } else if (opcao == "3") {
+    
+
+    } else {
+        alert("Opção Inválida")
+    }
+}
 
 // 11 – Contador de palavras
 // Peça uma frase
@@ -136,11 +245,37 @@ function exercicio6() {
 // Computador gera número
 // Soma e verifica resultado
 // Loop de repetição
-// Função para lógica
 // Validação de escolha
 /**
  * @author Natan
  */
+function exericio12(){}
+let continuar = "s";
+
+while (continuar === "s") {
+
+  let escolha = prompt("Escolha par ou impar").toLowerCase();
+
+  while (escolha !== "par" && escolha !== "impar") {
+    escolha = prompt("Digite certo ai Carai é (Par ou Ímpar)").toLowerCase();
+  }
+
+  let numero = Math.floor(Math.random() * 1001);
+
+  if (numero % 2 === 0 && escolha === "par") {
+    alert("Você acertou BB O número foi " + numero);
+  } else if (numero % 2 !== 0 && escolha === "impar") {
+    alert("Você acertou BB O número foi " + numero);
+  } else {
+    alert("Você errou seu Betinhaaa O número foi " + numero);
+  }
+
+  continuar = prompt("Quer jogar de novo? (s/n)").toLowerCase();
+
+  while (continuar !== "s" && continuar !== "n") {
+    continuar = prompt("Responda apenas com S ou N, Você é Foda hein BB").toLowerCase();
+  }
+}
 
 // 13 – Filtro de números
 // Receba vários números
@@ -149,6 +284,14 @@ function exercicio6() {
 // Use funções
 // Loop para entrada
 // Valide valores
+
+function exercicio13(){
+    let [pares, impares] = [[], []];
+    
+    prompt('Digite os numeros desejados (ultilize a virgula para separa-los): ').trim().split(',').map(n => parseFloat(n.trim())).map(e => (e % 2) == 0 ? pares.push(e) : impares.push(e));
+
+    console.log(pares, impares);
+}
 
 
 // 14 – Agenda simples
