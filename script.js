@@ -130,8 +130,64 @@ function exercicio5() {
  * 
  */
 
-function exercicio6() {
-    
+// A fila (array)
+let fila = [];
+
+// Função para adicionar alguém na fila
+function entrarNaFila(nome) {
+    fila.push(nome);
+    console.log(`\n>> ${nome} entrou na fila. [Posição: ${fila.length}]`);
+}
+
+// Função para atender o próximo da fila
+function atenderProximo() {
+    if (fila.length === 0) {
+        console.log("\n>> Fila vazia! Ninguém para atender.");
+    } else {
+        let atendido = fila.shift(); // Remove o primeiro
+        console.log(`\n>> Atendendo: ${atendido}.`);
+    }
+}
+
+// Função para ver a fila atual
+function verFila() {
+    if (fila.length === 0) {
+        console.log("\n>> A fila está vazia.");
+    } else {
+        console.log(`\n>> Fila atual: ${fila.join(" < ")}`);
+    }
+}
+
+// Loop contínuo para simular o sistema (usando prompt para interação)
+let rodando = true;
+while (rodando) {
+    let opcao = prompt(
+        "--- Sistema de Fila ---\n" +
+        "1. Entrar na fila\n" +
+        "2. Atender próximo\n" +
+        "3. Ver fila\n" +
+        "4. Sair\n" +
+        "Escolha uma opção:"
+    );
+
+    switch (opcao) {
+        case "1":
+            let nome = prompt("Nome da pessoa:");
+            if (nome) entrarNaFila(nome);
+            break;
+        case "2":
+            atenderProximo();
+            break;
+        case "3":
+            verFila();
+            break;
+        case "4":
+            rodando = false;
+            console.log("Sistema encerrado.");
+            break;
+        default:
+            console.log("Opção inválida!");
+    }
 }
 
 // 7 – Lista de compras
