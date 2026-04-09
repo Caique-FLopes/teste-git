@@ -130,60 +130,46 @@ function exercicio5() {
  * 
  */
 
-let fila = [];
+const CREDENCIAIS_CORRETAS = { user: "admin", pass: "1234" };
 
-function entrarNaFila(nome) {
-    fila.push(nome);
-    console.log(`\n>> ${nome} entrou na fila. [Posição: ${fila.length}]`);
+function validarLogin(usuario, senha) {
+  if (usuario === CREDENCIAIS_CORRETAS.user && senha === CREDENCIAIS_CORRETAS.pass) {
+    return true;
+  }
+  return false;
 }
 
-function atenderProximo() {
-    if (fila.length === 0) {
-        console.log("\n>> Fila vazia! Ninguém para atender.");
+function iniciarLogin() {
+  let tentativas = 0;
+  let logado = false;
+
+  do {
+    const userPrompt = prompt("Digite o usuário:");
+    const passPrompt = prompt("Digite a senha:");
+
+    if (validarLogin(userPrompt, passPrompt)) {
+      alert("Login bem-sucedido! Bem-vindo.");
+      logado = true;
+      break;
     } else {
-        let atendido = fila.shift(); 
-        console.log(`\n>> Atendendo: ${atendido}.`);
+      tentativas++;
+      alert(`Credenciais incorretas. Tentativa ${tentativas} de 3.`);
     }
+
+  } while (tentativas < 3);
+
+  if (!logado) {
+    throw new Error("Acesso bloqueado: Limite de tentativas excedido.");
+  }
 }
 
-function verFila() {
-    if (fila.length === 0) {
-        console.log("\n>> A fila está vazia.");
-    } else {
-        console.log(`\n>> Fila atual: ${fila.join(" < ")}`);
-    }
+try {
+  iniciarLogin();
+} catch (e) {
+  console.error(e.message);
+  alert(e.message);
 }
 
-let rodando = true;
-while (rodando) {
-    let opcao = prompt(
-        "--- Sistema de Fila ---\n" +
-        "1. Entrar na fila\n" +
-        "2. Atender próximo\n" +
-        "3. Ver fila\n" +
-        "4. Sair\n" +
-        "Escolha uma opção:"
-    );
-
-    switch (opcao) {
-        case "1":
-            let nome = prompt("Nome da pessoa:");
-            if (nome) entrarNaFila(nome);
-            break;
-        case "2":
-            atenderProximo();
-            break;
-        case "3":
-            verFila();
-            break;
-        case "4":
-            rodando = false;
-            console.log("Sistema encerrado.");
-            break;
-        default:
-            console.log("Opção inválida!");
-    }
-}
 
 // 7 – Lista de compras
 // Permita adicionar itens (array)
@@ -363,3 +349,60 @@ function exercicio13(){
 // Use funções
 // Loop contínuo
 // Trate fila vazia
+
+let fila = [];
+
+function entrarNaFila(nome) {
+    fila.push(nome);
+    console.log(`\n>> ${nome} entrou na fila. [Posição: ${fila.length}]`);
+}
+
+function atenderProximo() {
+    if (fila.length === 0) {
+        console.log("\n>> Fila vazia! Ninguém para atender.");
+    } else {
+        let atendido = fila.shift(); 
+        console.log(`\n>> Atendendo: ${atendido}.`);
+    }
+}
+
+// Função para ver a fila atual
+function verFila() {
+    if (fila.length === 0) {
+        console.log("\n>> A fila está vazia.");
+    } else {
+        console.log(`\n>> Fila atual: ${fila.join(" < ")}`);
+    }
+}
+
+// Loop contínuo para simular o sistema (usando prompt para interação)
+let rodando = true;
+while (rodando) {
+    let opcao = prompt(
+        "--- Sistema de Fila ---\n" +
+        "1. Entrar na fila\n" +
+        "2. Atender próximo\n" +
+        "3. Ver fila\n" +
+        "4. Sair\n" +
+        "Escolha uma opção:"
+    );
+
+    switch (opcao) {
+        case "1":
+            let nome = prompt("Nome da pessoa:");
+            if (nome) entrarNaFila(nome);
+            break;
+        case "2":
+            atenderProximo();
+            break;
+        case "3":
+            verFila();
+            break;
+        case "4":
+            rodando = false;
+            console.log("Sistema encerrado.");
+            break;
+        default:
+            console.log("Opção inválida!");
+    }
+}
